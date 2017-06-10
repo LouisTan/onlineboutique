@@ -18,7 +18,7 @@ public class MainController {
       log.info("info level log");
       log.error("error level log");
 
-      return "hello.html";
+      return "index";
   }
 
 }
