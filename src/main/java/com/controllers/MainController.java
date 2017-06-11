@@ -21,4 +21,22 @@ public class MainController {
       return "index";
   }
 
+  @RequestMapping("/about")
+  public String about() {
+
+       return "about";
+  }
+
+  @RequestMapping("/admin")
+  public String admin () {
+
+      return "admin";
+  }
+
+  @RequestMapping("/user")
+  public String user () {
+
+      return "user";
+  }
+
 }

@@ -1,20 +1,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
+
 </head>
+
 <body>
-<div th:fragment="footer">
+    <div th:fragment="footer">
 
-    <div class="container">
+        <div class="container">
 
-        <footer>
+            <footer>
+                <br />
+                © 2017 onlineboutique.com
+                <span sec:authorize="isAuthenticated()">
+                    | Logged user: <span sec:authentication="name"></span> |
+                    Roles: <span sec:authentication="principal.authorities"></span> |
+                    <a th:href="@{/logout}">Sign Out</a>
+                </span>
 
-            © 2017 mkyong.com
+                <script type="text/javascript" th:href="@{/js/bootstrap.js}"
+                        src="../../static/js/bootstrap.js"></script>
 
+            </footer>
+        </div>
 
-        </footer>
     </div>
-
-</div>
 </body>
 </html>
