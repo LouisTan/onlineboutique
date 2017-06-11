@@ -1,4 +1,4 @@
-package com.error;
+package com.lester.error;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

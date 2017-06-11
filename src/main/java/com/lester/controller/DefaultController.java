@@ -1,4 +1,4 @@
-package com.controller;
+package com.lester.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,18 +7,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class DefaultController {
-
     @RequestMapping("/")
     public String index() {
 
       final Logger log = LoggerFactory.getLogger(this.getClass());
 
-      // Log a simple message
       log.debug("debug level log");
       log.info("info level log");
       log.error("error level log");
 
-      return "/index";
+        return "/home";
+    }
+
+    @RequestMapping("/home")
+    public String home() {
+
+      return "/home";
     }
 
     @RequestMapping("/about")
